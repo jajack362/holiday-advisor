@@ -1,0 +1,158 @@
+/* MOBILE AND GLOBAL STYLES */
+
+/* applies to screens smaller than 500px (first breakpoint) */
+/* and above unless overwritten below */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/*DEFAULT STYLING */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* NAVIGATION BAR STYLING */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #d4d7de;
+  width: 100%;
+  height: 165px;
+  z-index: 1;
+  top: 0;
+}
+
+.nav {
+  flex-direction: column;
+  display: flex;
+  list-style: none;
+}
+
+.nav a {
+  margin: 15px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  color: #fff;
+  background-color: #262626;
+  transition: 0.5s;
+}
+
+
+/* MAIN BANNER STYLING */
+.header h1 {
+  font-size: 40px;
+}
+
+.banner {
+  margin-top: 145px;
+  background: #d4d7de;
+}
+
+/* CENTERING AREAS WITH TEXT */
+.banner, .sightseeing, .skiing, .beach, .themeparks, .contact, .contact {
+  text-align: center;
+  padding: 10px;
+}
+
+/* COLUMN STYLING */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  flex: 20%;
+  padding: 10px;
+}
+
+.sightseeing, .skiing {
+  background: #fefefe;
+}
+
+/* INVERT COLOURS EVERY OTHER SET OF HOLIDAYS */
+.beach, .themeparks {
+  background: #262626;
+  color: #fff;
+}
+
+/* CONTACT INFO STYLING */
+
+input[type=text], #country {
+  padding: 10px;
+}
+
+#message {
+  height: 80px;
+  width: 300px;
+  resize: vertical;
+}
+
+#beachbanner, #sightseeingbanner, #beachbanner, #skiingbanner, #themeparksbanner, #contactmebanner {
+  width: 300px;
+  height: auto;
+}
+
+#submit:hover {
+  background: #262626;
+  color: #fff;
+  transition: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 500px) {
+
+  /* applies to screens wider than 499px */
+  #beachbanner, #sightseeingbanner, #beachbanner, #skiingbanner, #themeparksbanner, #contactmebanner {
+    width: 500px;
+    height: auto;
+  }
+}
+
+
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1000px) {
+
+  /* applies to screens wider than 999px */
+
+/* RESIZE PICTURES TO NORMAL DIMENSIONS*/
+  #beachbanner, #sightseeingbanner, #beachbanner, #skiingbanner, #themeparksbanner, #contactmebanner {
+    width: auto;
+    height: auto;
+  }
+
+/* NAVBAR RESIZING */
+  .banner {
+    margin-top: 50px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+
+/* DISPLAY INFORMATION IN TWO COLUMNS */
+  .leftinfo, .rightinfo {
+    flex: 30%;
+    padding: 10px;
+    text-align: center;
+  }
+}
